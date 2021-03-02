@@ -5,7 +5,10 @@
 <%= search_form_for @q do |f| %>
   <%= f.label :name, 'Keyword'%>
   <%= f.search_field :name_cont%><br>
-  <%= f.submit '検索'%>
+  <%= f.label :age%>
+  <%= f.number_field :age_gteq%>才以上
+  <%= f.number_field :age_lt%>才未満
+  <p><%= f.submit '検索'%></p>
 <% end %>
 
 <table>
