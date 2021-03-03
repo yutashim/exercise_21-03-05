@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
+  # search_fieldに数値を入れても空白文字
+  # ""はInteger型に変換すると0になる
+  
   def index
     # @users = User.all
     @q = User.ransack(params[:q])

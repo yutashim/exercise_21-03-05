@@ -8,6 +8,10 @@
   <%= f.label :age%>
   <%= f.number_field :age_gteq%>才以上
   <%= f.number_field :age_lt%>才未満
+  <%= f.label :sex%>
+  <%= f.radio_button :sex_eq, '', checked: true%>指定なし
+  <%= f.radio_button :sex_eq, 0%>女性
+  <%= f.radio_button :sex_eq, 1%>男性
   <p><%= f.submit '検索'%></p>
 <% end %>
 
