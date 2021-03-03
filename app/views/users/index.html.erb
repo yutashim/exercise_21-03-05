@@ -18,6 +18,12 @@
 <table>
   <thead>
     <tr>
+      <th><%= sort_link(@q, :name, 'Name')%></th>
+      <th><%= sort_link(@q, :age, 'Age')%></th>
+      <th><%= sort_link(@q, :sex, 'Sex')%></th>
+      <th><%= sort_link(@q, :address, 'Address')%></th>
+    </tr>
+    <tr>
       <th>Name</th>
       <th>Age</th>
       <th>Sex</th>
