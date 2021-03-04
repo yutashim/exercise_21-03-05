@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_04_071359) do
+ActiveRecord::Schema.define(version: 2021_03_04_071558) do
+
+  create_table "labelings", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "label_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["label_id"], name: "index_labelings_on_label_id"
+    t.index ["post_id"], name: "index_labelings_on_post_id"
+  end
 
   create_table "labels", force: :cascade do |t|
     t.string "content"
