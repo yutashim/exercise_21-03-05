@@ -1,0 +1,4 @@
+<%= form_with(model: label, remote: true, url: '#') do |f| %>
+  <%= f.text_field :content, placeholder: 'ラベルを追加'%>
+  <%= f.submit%>
+<% end %>

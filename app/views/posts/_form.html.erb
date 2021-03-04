@@ -1,3 +1,7 @@
+<div class="field">
+  <%= render 'labels/form', label: Label.new%>
+</div>
+
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +26,6 @@
       <%= l.check_box%>
     <% end %>
   </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
